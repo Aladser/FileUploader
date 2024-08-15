@@ -1,7 +1,5 @@
 <?php
 
-namespace App\Services;
-
 /** Загрузчик файлов на сервер */
 class FileUploader
 {
@@ -30,7 +28,7 @@ class FileUploader
                             array_push($file_url_array, '/'.env('MEDIA_ROOT').'/'.$image_name);
                         }
                     }
-                } catch (\Exception $e) {
+                } catch (Exception $e) {
                     var_dump($e);
                 }
             }
